@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home">effects</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="user/1">User</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input
+          #textInput
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+        />
+        <button
+          (keyup.enter)="goToUser(textInput.value)"
+          (click)="goToUser(textInput.value)"
+          class="btn btn-outline-success"
+          type="button"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
