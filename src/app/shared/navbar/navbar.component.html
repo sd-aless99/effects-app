@@ -10,22 +10,22 @@
           <a class="nav-link" routerLink="user/1">User</a>
         </li>
       </ul>
-      <form class="d-flex" role="search">
+      <div class="d-flex" role="search">
         <input
           #textInput
+          (keyup.enter)="goToUser(textInput.value)"
           class="form-control me-2"
           type="search"
           placeholder="Search"
         />
         <button
-          (keyup.enter)="goToUser(textInput.value)"
           (click)="goToUser(textInput.value)"
           class="btn btn-outline-success"
           type="button"
         >
           Search
         </button>
-      </form>
+      </div>
     </div>
   </div>
 </nav>

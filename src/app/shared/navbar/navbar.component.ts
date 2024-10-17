@@ -19,6 +19,6 @@ export class NavbarComponent {
       return;
     }
 
-    this.router.navigate(['/user]', id]);
+    this.router.navigate(['/user', id]);
   }
 }
